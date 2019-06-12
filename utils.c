@@ -6,7 +6,7 @@
 /*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 18:03:08 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/06/08 16:07:55 by fhenrion         ###   ########.fr       */
+/*   Updated: 2019/06/12 11:59:00 by linfan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_free_grid(char **grid, int size)
 void	ft_free_coord(t_list *lst)
 {
 	t_list	*tmp;
-	
+
 	while (lst)
 	{
 		tmp = lst;
