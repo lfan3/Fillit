@@ -67,10 +67,12 @@ int		ft_check_piece(char *piece, int end)
 t_list	*ft_read_file(int fd)
 {
 	int		count;
+	int		size;
 	char	buf[21];
 	char	c;
 
 	c = 'A';
+	size = 0;
 	while ((count = read(fd, buf, 21)) == 21)
 	{
 		buf[count] = '\0';
@@ -78,9 +80,10 @@ t_list	*ft_read_file(int fd)
 			return (NULL);
 		else if (!ft_save_piece(buf, c++))
 			return (NULL);
+		size++;
 	}
 	buf[count] = '\0';
-	if (ft_check_piece(buf, 1))
+	if (ft_check_piece(buf, 1) || size > 26)
 		return (NULL);
 	else
 		return (ft_save_piece(buf, c));
